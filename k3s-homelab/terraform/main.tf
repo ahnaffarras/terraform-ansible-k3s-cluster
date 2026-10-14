@@ -125,7 +125,7 @@ resource "libvirt_cloudinit_disk" "worker_init" {
 }
 
 # ============================================================
-# VM Domain: Master
+# VM Domain: Master Server
 # ============================================================
 resource "libvirt_domain" "master" {
   name      = local.master_name
@@ -163,7 +163,7 @@ resource "libvirt_domain" "master" {
 }
 
 # ============================================================
-# VM Domain: Worker
+# VM Domain: Worker Server
 # ============================================================
 resource "libvirt_domain" "worker" {
   count     = var.worker_count
